@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Form</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="js/validation.js"></script>
+  </head>
+  <body>
+    <h1>User Form</h1>
+    <form id="userForm" action="save_data.php" method="POST">
+      <label for="firstName">First Name: *</label>
+      <input type="text" id="firstName" name="firstName" required>
+      
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName">
+      
+      <label for="dob">Date Of Birth: *</label>
+      <input type="text" id="dob" name="dob" required>
+      
+      <label for="gender">Gender: *</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      
+      <label for="telephone">Telephone Number: *</label>
+      <input type="tel" id="telephone" name="telephone" required>
+      
+      <label for="email">Email: *</label>
+      <input type="email" id="email" name="email" required>
+      
+      <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+      
+      <input type="submit" value="Submit">
+      <p class="error-message"></p>
+    </form>
+  </body>
+</html>
